@@ -5,6 +5,7 @@ import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -38,6 +39,10 @@ public class WebDriverSelection {
                 break;
             case "chrome":
                 myPersonalDriver = new ChromeDriver();
+                break;
+            case "edge":
+                System.setProperty("webdriver.edge.driver","C://WebDrivers//edgedriver.exe");
+                myPersonalDriver = new EdgeDriver();
                 break;
             case "remote_chrome":
                 try {

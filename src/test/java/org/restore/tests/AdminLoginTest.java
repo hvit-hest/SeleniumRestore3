@@ -18,7 +18,7 @@ import java.util.List;
 
 import static org.testng.Assert.assertTrue;
 
-public class AdminLoginTest extends BaseTest{
+public class AdminLoginTest extends BaseTest {
 
     private WebDriver myPersonalDriver;
     AdminPage adminPage;
@@ -56,12 +56,12 @@ public class AdminLoginTest extends BaseTest{
 
     @AfterClass
     public void afterClass() {
-
+        myPersonalDriver.quit();
     }
 
     @DataProvider
     private Object[] getData() {
-       return readLoginTestDataJson("LoginTestData.json").toArray();
+        return readLoginTestDataJson("LoginTestData.json").toArray();
     }
 
     private List<LoginTestDataModel> readLoginTestDataJson(String jsonArrayFile) {

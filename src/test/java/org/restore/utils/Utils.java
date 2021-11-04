@@ -39,5 +39,4 @@ public class Utils {
         Properties prop = loadPropertiesFile("testconfig.properties");
         prop.forEach((k, v) -> System.out.println(k + " " + v));
     }
-
 }
